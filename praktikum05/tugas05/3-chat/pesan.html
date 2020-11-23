@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title> Pesan</title>
+        <style>
+            body{
+              overflow-y: hidden;
+              margin:0;
+              padding: 0;
+              font-family: 'Times New Roman';
+              background-color: palegreen;
+            }
+            
+            #kotakchat {
+              background-color: lightblue;
+              text-align: left;
+              height: 200px;
+              width: 800px;
+              margin-left: 6%;
+              overflow: scroll;
+              overflow-x: hidden;
+              padding: 5px;
+            }
+            #pesan{
+                width: 785px;
+                margin-left: 6%;
+            }
+            
+            h2{
+             text-align:center;
+              margin: 10px;
+              margin-bottom: 20px;
+              padding: 10px;
+              font-weight: bold;
+              color: white;
+              font-family: 'Times New Roman';
+              background-color: black;
+              border-radius: 20px;
+            }
+            </style>
+            <script lang="JavaScript">
+
+            function Pesan(){
+            let Kontak = document.getElementById("kotakchat").innerHTML;
+            let ChatBaru = document.getElementById("pesan").value;
+            let Pengirim = document.getElementById("akun").value;     
+            let Hasil = Kontak+"<br /><b>"+ Pengirim + "</b>: " + ChatBaru;
+            console.log(Hasil);
+            document.getElementById("kotakchat").innerHTML = Hasil;
+            document.getElementById("pesan").value = "";
+            }
+            </script>
+    </head>
+    <body>
+        <h2>Wasap Online</h2>
+         Tulis Nama kamu : <input type="text" id="akun"/></td>
+
+        <div id="kotakchat"></div>
+        <form>
+            <textarea rows="3" cols="100" id="pesan"></textarea>
+            <input type="button" value="Kirim" onclick="Pesan();"/>
+        </form>
+    </body>
+</html>

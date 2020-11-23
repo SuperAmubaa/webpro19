@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title> Image Picker</title>
+        <style>
+            body{
+              overflow-y: hidden;
+              margin:0;
+              padding: 0;
+              font-family: 'Times New Roman';
+              background-color: powderblue;
+            }
+        </style>            
+            
+            
+        <script language="JavaScript">
+
+            function tukar(){
+            let hp = document.getElementById("handphone").value;
+            
+            if (hp == "samsung"){
+            document.getElementById("gambar").src = "gambar/samsung.jpg";
+            } else if (hp == "asusrog"){
+            document.getElementById("gambar").src = "gambar/asus rog.jpg";
+            } else if (hp == "vivo"){
+            document.getElementById("gambar").src = "gambar/vivo.jpg";
+            } else if (hp == "realme"){
+            document.getElementById("gambar").src = "gambar/realme.jpg";
+            } else if (hp == "iphone"){
+            document.getElementById("gambar").src = "gambar/iphone.jpg";
+            } else if (hp == "oppo"){
+            document.getElementById("gambar").src = "gambar/oppo.jpg";
+            } else if (hp == "xiaomi"){
+            document.getElementById("gambar").src = "gambar/xiomi.jpeg";
+            } else if (hp == "infinix"){
+            document.getElementById("gambar").src = "gambar/infinix.jpg";
+            }  
+            else {
+            document.getElementById("gambar").src = "";
+            }
+            
+              }
+        
+            </script>
+    </head>
+    <body>
+        <h2>Ini adalah merek Hp dan Gambarnya</h2>
+        <form>
+            
+            <select name="nama-handphone" id="handphone" onkeyup="tukar();" onchange="tukar();">
+                <option value="pilih">[Pilih Handphone]</option>
+                <option value="samsung">Samsung</option>
+                <option value="asusrog">Asus Rog</option>
+                <option value="vivo">Vivo</option>
+                <option value="realme">Realme</option>
+                <option value="iphone">Iphone</option>
+                <option value="oppo">Oppo</option>
+                <option value="xiaomi">Xiaomi</option>
+                <option value="infinix">Infinix</option>
+            </select>    
+        </form>
+        <img id="gambar" src=""/>
+    </body>
+</html>

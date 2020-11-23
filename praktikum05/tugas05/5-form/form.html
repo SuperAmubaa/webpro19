@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title>Form</title>
+        <style>
+body{
+              overflow-y: hidden;
+              margin:0;
+              padding: 0;
+              font-family: 'Times New Roman';
+              background-color: powderblue;
+            }
+
+h1 {
+margin-left: 70px;
+}
+form li {
+list-style: none;
+margin-bottom: 5px;
+}
+
+form ul li label{
+float: left;
+clear: left;
+width: 100px;
+text-align: right;
+margin-right: 10px;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:14px;
+}
+
+form ul li input, select, span {
+float: left;
+margin-bottom: 10px;
+}
+
+form textarea {
+float: left;
+width: 350px;
+height: 150px;
+}
+
+[type="submit"] {
+clear: left;
+margin: 20px 0 0 230px;
+font-size:18px
+}
+
+p {
+margin-left: 70px;
+font-weight: bold;
+}
+
+        </style>
+    <script language="JavaScript">
+    
+    function formValidation()
+{
+    let input_pelanggan = document.registration.pelanggan;
+    let input_email = document.registration.email;
+    let input_jam = document.registration.jam;
+    let input_tujuan = document.registration.tujuan;
+    let input_tiket = document.registration.tiket;
+
+return false;
+}
+
+        </script>
+    </head>
+    <body>
+        <body>
+            <h1>Registration Form</h1>
+
+            <form name='registration' onSubmit="return formValidation();">
+                <ul>
+                    <li><label for="pelanggan">Nama:</label></li>
+                    <li><input type="text" name="pelanggan"/><span class="error" id="pelanggans"></span></li>
+                    <li><label for="email">Email:</label></li>
+                    <li><input type="email" name="email"/><span class="error" id="emails"></span></li>
+                    <li><label for="jam">Waktu:</label></li>
+                    <li><input type="time" name="jam"/> <span class="error" id="jams"></span></li>
+                    <li><label for="tujuan">Tujuan:</label></li>
+                    <li><input type="text" name="tujuan"/><span class="error" id="tujuans"></span></li>
+                    <li><label for="tiket">Jumlah Tiket:</label></li>
+                    <li><select name="tike">
+                    <option selected="pilih" value="Default">(Banyaknya Tiket)</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select><span class="error" id="tikets"></span><br />     
+                            <li><input type="submit" name="submit" value="Kirim" /></li>
+            </ul>
+            </form>
+    </body>
+</html>

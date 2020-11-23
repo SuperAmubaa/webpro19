@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <title> Kurs Rupiah</title>
+        <style>
+            body{
+              overflow-y: hidden;
+              margin:0;
+              padding: 0;
+              font-family: 'Times New Roman';
+              background-color:#393939;
+            }
+            table{
+              width: 300px;
+              margin: 120px auto;
+              padding: 30px;
+              font-family: 'Times New Roman';
+              background-color: aqua;
+            }
+            h2{
+             text-align:center;
+              margin: 10px;
+              margin-bottom: 20px;
+              padding: 10px;
+              font-weight: bold;
+              color: black;
+              font-family: 'Times New Roman';
+              background-color: aqua;
+              border-radius: 20px;
+            }
+        </style>
+        <script lang="JavaScript">
+
+            function konversi(){
+            let kurs = document.getElementById("kursnya").value;
+            let uangnya = document.getElementById("asing").value;
+
+            if (kurs == "USD"){
+	        document.getElementById("rupiah").value = uangnya*9915;
+	        } else if (kurs == "SGD"){
+            document.getElementById("rupiah").value = uangnya*13472;
+            } else if (kurs == "RMY"){
+            document.getElementById("rupiah").value = uangnya*874;
+            } else if (kurs == "JPY"){
+            document.getElementById("rupiah").value = uangnya*100;
+            } else if (kurs == "EUR"){
+            document.getElementById("rupiah").value = uangnya*15888;
+            } else if (kurs == "RSA"){
+            document.getElementById("rupiah").value = uangnya*3592;
+            } else {
+            document.getElementById("rupiah").value = "ERROR";
+            }
+         }
+        </script>
+    </head>
+<body>
+    <h2>Konversi Kurs</h2>
+
+	<form>
+		<table>
+		<tr>
+		<td>Masukan Nilai</td>
+		<td>Valas</td>
+		<td>Nilai Rupiah</td>
+        </tr>
+        
+		<tr>
+		    <td>
+		<input type="text" id="asing" onchange="konversi();" onkeyup="konversi();"/>
+		    </td>
+		
+		<td>
+		<select name="kursuang" id="kursnya" onkeyup="konversi();" onchange="konversi();">
+			<option value="USD">Dollar US</option>
+			<option value="SGD">Dollar Singapore</option>
+			<option value="RMY">Ringgit Malaysia</option>
+			<option value="JPY">Yen Jepang</option>
+			<option value="EUR">Euro </option>
+			<option value="RSA">Riyal Arab Saudi</option>
+		</select>
+		</td>
+	
+		<td>
+		<input type="text" id="rupiah" disabled/>
+		</td>
+		</tr>
+		
+		</table>
+	</form>
+	
+</body>
+</html>
